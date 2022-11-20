@@ -1,0 +1,14 @@
+version: "2.2"
+
+services:
+  localstack:
+    container_name: "localstack"
+    image: 'localstack/localstack'
+    network_mode: bridge
+    ports:
+      - "127.0.0.1:4566:4566"
+    environment:
+      - AWS_DEFAULT_REGION=sa-east-1
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - DEFAULT_REGION=sa-east-1
